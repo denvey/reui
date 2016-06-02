@@ -1,0 +1,32 @@
+@import "../../less/ios/_colors-vars";
+@import "../../less/ios/_mixins";
+
+.carousel1-enter {
+  opacity: 0;
+}
+.carousel1-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.carousel1-leave {
+  opacity: 1;
+}
+.carousel1-leave-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+.carousel2-enter {
+  left: 100%;
+}
+.carousel2-enter-active {
+  left: 0;
+  transition: left 300ms ease-in;
+}
+.carousel2-leave {
+  left: 0;
+}
+.carousel2-leave-active {
+  left: -100%;
+  transition: left 300ms ease-in;
+}

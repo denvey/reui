@@ -33,7 +33,6 @@
   border-radius: 13px;
   overflow: hidden;
   opacity: 0;
-  .transform(translate3d(0,0,0) scale(1.185));
   -webkit-transition-property: -webkit-transform, opacity;
   -moz-transition-property: -moz-transform, opacity;
   -ms-transition-property: -ms-transform, opacity;
@@ -41,11 +40,10 @@
   transition-property: transform, opacity;
   color:#000;
   display: none;
-
   &.modal-in {
+    .animation(modalIn @modalDuration);
+    //.transition(@modalDuration);
     opacity: 1;
-    .transition(@modalDuration);
-    .transform(translate3d(0,0,0) scale(1));
   }
   &.modal-out {
     opacity: 0;
@@ -54,6 +52,18 @@
     .transform(translate3d(0,0,0) scale(1));
   }
 }
+
+@-webkit-keyframes modalIn {
+  0% {
+    opacity: 0 !important;
+    .transform(translate3d(0,0,0) scale(1.185));
+  }
+  100% {
+    opacity: 1;
+    .transform(translate3d(0,0,0) scale(1));
+  }
+}
+
 .modal-inner {
   padding: 15px;
   border-radius: 13px 13px 0 0;

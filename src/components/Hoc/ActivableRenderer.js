@@ -10,7 +10,7 @@ const ActivableRendererFactory = (options = {delay: 500}) => (ActivableComponent
 
     static defaultProps = {
       delay: options.delay
-    }
+    };
 
     state = {
       active: this.props.active,

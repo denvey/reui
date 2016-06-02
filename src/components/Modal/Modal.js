@@ -19,15 +19,15 @@ const Modal = (props) => {
                                 + (!props.buttons || props.buttons.length === 0 ? ' modal-no-buttons ' : ' ')
                                 + (props.className || '')} style={{display:'block',marginTop: '-62px'}}>
         <div className="modal-inner">
-          {props.title ? <div className="modal-title">{props.title}</div> : ''}
-          {props.text ? <div className="modal-text">{props.text}</div> : ''}
-          {props.children}
+          {props.title ? <div className="modal-title">{props.title}</div> : null}
+          {props.text ? <div className="modal-text">{props.text}</div> : null}
+          {props.children ? <div className="modal-text">{props.children}</div> : null}
         </div>
         {props.buttons && props.buttons.length > 0 ?
           <div
             className={'modal-buttons modal-buttons-' + props.buttons.length + classnames({' modal-buttons-vertical': props.verticalButtons})}>
             {props.buttons.map((button, idx) =>
-              <span key={idx} onClick={props.onClick}
+              <span key={idx} onClick={button.onClick}
                     className={'modal-button' + (button.bold ? ' modal-button-bold' : '')}>
                                 {button.text}
                             </span>
