@@ -43,24 +43,25 @@
   &.modal-in {
     .animation(modalIn @modalDuration);
     //.transition(@modalDuration);
+    .transform(translate3d(0,-50%,0) scale(1));
     opacity: 1;
   }
   &.modal-out {
     opacity: 0;
     z-index: 13500-1;
     .transition(@modalDuration);
-    .transform(translate3d(0,0,0) scale(1));
+    .transform(translate3d(0,-50%,0) scale(1));
   }
 }
 
 @-webkit-keyframes modalIn {
   0% {
     opacity: 0 !important;
-    .transform(translate3d(0,0,0) scale(1.185));
+    .transform(translate3d(0,-50%,0) scale(1.185));
   }
   100% {
     opacity: 1;
-    .transform(translate3d(0,0,0) scale(1));
+    .transform(translate3d(0,-50%,0) scale(1));
   }
 }
 

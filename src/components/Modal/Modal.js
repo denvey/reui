@@ -17,7 +17,7 @@ const Modal = (props) => {
     >
       <div className={'modal ' + (props.active ? 'modal-in' : 'modal-out')
                                 + (!props.buttons || props.buttons.length === 0 ? ' modal-no-buttons ' : ' ')
-                                + (props.className || '')} style={{display:'block',marginTop: '-62px'}}>
+                                + (props.className || '')} style={{display:'block'}}>
         <div className="modal-inner">
           {props.title ? <div className="modal-title">{props.title}</div> : null}
           {props.text ? <div className="modal-text">{props.text}</div> : null}
