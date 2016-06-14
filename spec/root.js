@@ -4,6 +4,8 @@
 import React from 'react';
 import Button from './components/button';
 import Modal from './components/modal';
+import View from '../src/components/View';
+import Page from '../src/components/Page';
 // import Slider from './components/Slider';
 import style from './style';
 
@@ -12,10 +14,11 @@ const _hrefProject = () => {
 };
 
 const Root = () => (
-  <div className={style.app}>
-    <Button />
-    <Modal />
-
-  </div>
+  <View>
+    <Page>
+      <Button />
+      <Modal />
+    </Page>
+  </View>
 );
 export default Root;
