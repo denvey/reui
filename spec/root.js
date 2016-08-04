@@ -6,6 +6,7 @@ import Button from './components/button';
 import Modal from './components/modal';
 import View from '../src/components/View';
 import Page from '../src/components/Page';
+import TabBar from './components/tabBar';
 // import Slider from './components/Slider';
 import style from './style';
 
@@ -18,6 +19,7 @@ const Root = () => (
     <Page>
       <Button />
       <Modal />
+      <TabBar />
     </Page>
   </View>
 );
