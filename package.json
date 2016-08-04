@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-ui",
+  "name": "reui",
   "version": "0.1.0",
   "description": "This is a React redux UI.",
   "main": "./lib/index",
