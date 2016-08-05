@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Portal from '../Hoc/Portal';
 import classnames from 'classnames';
-import style from './style';
+import style from './style.less';
 
 export default class Overlay extends React.Component {
   static propTypes = {

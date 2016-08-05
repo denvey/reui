@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import ActivableRenderer from '../Hoc/ActivableRenderer';
 import Button from '../Button';
 import Overlay from '../Overlay';
-import style from './style';
+import style from './style.less';
 
 const Modal = (props) => {
   return (

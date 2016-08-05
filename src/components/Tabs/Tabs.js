@@ -5,7 +5,7 @@ import React,{ PropTypes } from 'react';
 import Page from '../Page';
 import style from './style';
 
-export default class Page extends React.Component {
+export default class Tabs extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired
   };
