@@ -46,7 +46,7 @@ export default class Overlay extends React.Component {
     const classname = classnames({
       "modal-overlay": true,
       "modal-overlay-visible": this.props.active
-    });
+    }, this.props.className);
     return (
       <Portal>
         <div>

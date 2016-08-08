@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import classnames from 'classnames';
-import style from './style';
+import style from './style.less';
 
 export default class ButtonGroup extends React.Component {
   static propTypes = {

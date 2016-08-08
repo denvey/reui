@@ -15,11 +15,11 @@ class ModalTest extends React.Component {
       loading: !this.state.loading
     });
 
-    setTimeout(() => {
+    /*setTimeout(() => {
       this.setState({
         loading: !this.state.loading
       });
-    },1000)
+    },1000)*/
   };
 
   render() {
@@ -27,12 +27,14 @@ class ModalTest extends React.Component {
       <section>
         <h5>Preloader</h5>
         <p>lorem ipsum...</p>
+        <Preloader />
+        <Preloader className="white" />
         <Button onClick={this.handleToggle}>Preloader</Button>
-        <Preloader
+        {/*<Preloader
           active={this.state.loading}
           onOverlayClick={this.handleToggle}
           onEscKeyDown={this.handleToggle}
-        />
+        />*/}
       </section>
     );
   };

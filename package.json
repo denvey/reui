@@ -2,7 +2,7 @@
   "name": "re-ui",
   "version": "0.1.7",
   "description": "This is a React redux UI.",
-  "main": "./lib",
+  "main": "./lib/lib/components/index.js",
   "files": [
     "lib/"
   ],
