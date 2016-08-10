@@ -1,32 +1,26 @@
 import React,{ PropTypes } from 'react';
 import classnames from 'classnames';
-import ActivableRenderer from '../Hoc/ActivableRenderer';
-import Button from '../Button';
+import Preloader from './Preloader';
+import PreloaderIndicator from './PreloaderIndicator';
 import Overlay from '../Overlay';
-import style from './style.less';
+import Modal from '../Modal';
 
-const Proloader = (props) => {
-  return (
-    <Overlay
-      active={props.active}
-      onClick={props.onOverlayClick}
-      onMouseDown={props.onOverlayMouseDown}
-      onMouseUp={props.onOverlayMouseUp}
-      onMouseMove={props.onOverlayMouseMove}
-      onEscKeyDown={props.onEscKeyDown}
-      className="preloader-indicator-overlay"
-    >
-      <div className="preloader-indicator-modal">
-        <span className="preloader preloader-white"></span>
-      </div>
-    </Overlay>
-  );
+const Preloaders = (props) => {
+  if(props.type === 'modal') {
+    let modalData = {
+      title: props.title || "Loading... "
+    };
+    return <Modal {...props} {...modalData}><Preloader/>{props.children}</Modal>
+  } else if(props.type === 'indicator') {
+    return <PreloaderIndicator {...props}/>
+  } else {
+    return <Preloader className={props.className} />
+  }
 };
-
-Proloader.propTypes = {
-  active: PropTypes.bool,
+Preloaders.propTypes = {
+  className: PropTypes.string
+  /*active: PropTypes.bool,
   children: PropTypes.node,
-  className: PropTypes.string,
   onEscKeyDown: PropTypes.func,
   onOverlayClick: PropTypes.func,
   onOverlayMouseDown: PropTypes.func,
@@ -34,11 +28,21 @@ Proloader.propTypes = {
   onOverlayMouseUp: PropTypes.func,
   title: PropTypes.string,
   text: PropTypes.string,
-  afterText: PropTypes.string
+  afterText: PropTypes.string*/
 };
 
-Proloader.defaultProps = {
-  buttons: [],
+/*Preloaders.defaultProps = {
   active: false
-};
-export default ActivableRenderer()(Proloader);
+};*/
+
+{/*<div class="modal modal-no-buttons modal-preloader modal-in" style="display: block; margin-top: -50px;">
+ <div class="modal-inner">
+ <div class="modal-title">Loading... </div>
+ <div class="modal-text">
+ <div class="preloader"></div>
+ </div>
+ </div>
+ <div class="modal-buttons "></div>
+ </div>*/}
+
+export default Preloaders;

@@ -10,10 +10,7 @@ const Proloader = (props) => {
 };
 
 Proloader.propTypes = {
-  className: PropTypes.string,
-  title: PropTypes.string,
-  text: PropTypes.string,
-  afterText: PropTypes.string
+  className: PropTypes.string
 };
 
 export default Proloader;
