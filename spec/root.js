@@ -8,6 +8,7 @@ import View from '../src/components/View';
 import Page from '../src/components/Page';
 import TabBar from './components/tabBar';
 import Preloader from './components/preloader';
+import Accordion from './components/accordion';
 // import Slider from './components/Slider';
 import style from './style';
 
@@ -21,6 +22,7 @@ const Root = () => (
       <Button />
       <Modal />
       <Preloader />
+      <Accordion />
     </Page>
   </View>
 );

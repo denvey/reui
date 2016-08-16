@@ -35,14 +35,4 @@ Preloaders.propTypes = {
   active: false
 };*/
 
-{/*<div class="modal modal-no-buttons modal-preloader modal-in" style="display: block; margin-top: -50px;">
- <div class="modal-inner">
- <div class="modal-title">Loading... </div>
- <div class="modal-text">
- <div class="preloader"></div>
- </div>
- </div>
- <div class="modal-buttons "></div>
- </div>*/}
-
 export default Preloaders;

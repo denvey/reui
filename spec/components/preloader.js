@@ -5,7 +5,7 @@ import React, { PropTypes } from 'react';
 import Button from '../../src/components/Button';
 import { Preloader, Preloaders } from '../../src/components/Preloader';
 
-class ModalTest extends React.Component {
+class PreloaderTest extends React.Component {
   state = {
     loading: false
   };
@@ -76,4 +76,4 @@ class ModalTest extends React.Component {
   };
 }
 
-export default ModalTest;
+export default PreloaderTest;
