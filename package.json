@@ -32,8 +32,7 @@
     "react-dom": "^15.3.0",
     "react-fastclick": "^2.1.2"
   },
-  "peerDependencies": {
-  },
+  "peerDependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.7.6",
@@ -60,6 +59,7 @@
     "postcss-loader": "^0.8.2",
     "power-assert": "~1.0.0",
     "react-hot-loader": "^1.3.0",
+    "react-router": "^2.6.1",
     "style-loader": "^0.12.1",
     "webpack": "^1.12.8",
     "webpack-dev-server": "^1.12.1",

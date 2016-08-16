@@ -14,7 +14,9 @@ export default class View extends React.Component {
     return (
       <div className="views">
         <div className="view">
-          {children}
+          <div className="pages">
+            <div className="page">{children}</div>
+          </div>
         </div>
       </div>
     )

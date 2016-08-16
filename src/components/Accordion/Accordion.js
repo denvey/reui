@@ -28,23 +28,14 @@ export default class Accordion extends React.Component {
     });
   }
 
-  /*get maxHeight() {
-    if (this.refs.accrodionContent) {
-      const body = ReactDOM.findDOMNode(this.refs.accrodionContent);
-      return `${body.scrollHeight}px`;
-    } else {
-      return 'auto';
-    }
-  }*/
-
-  componentWillReceiveState() {
-    if (this.props.expanded) {
+  componentWillReceiveProps() {
+    /*if (this.props.expanded) {*/
       const body = ReactDOM.findDOMNode(this.refs.accrodionContent);
       //return `${body.scrollHeight}px`;
       this.setState({
         maxHeight: `${body.scrollHeight}px`
-      })
-    }
+      });
+    /*}*/
   }
 
   render() {
